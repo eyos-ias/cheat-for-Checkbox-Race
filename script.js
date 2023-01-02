@@ -4,7 +4,7 @@ async function run(){
  const browser = await puppeteer.launch({headless: false});
 const page = await browser.newPage();
 await page.goto('https://checkboxrace.com/');
-await delay(7000);
+await delay(1000);
 const checkboxHandles = await page.$$('input[type="checkbox"]');
 for (const checkboxHandle of checkboxHandles) {
   await checkboxHandle.click();
